@@ -1,0 +1,1392 @@
+:root {
+  --orange-main: #ff8a00;
+  --orange-soft: #ffb04d;
+}
+/* =====================================================
+VICTORY-STYLE ✨ EXTRA-ORDINARY PORTFOLIO (DARK)
+Animations • Sections • Premium Feel
+Brand Accent: ORANGE (Refined)
+===================================================== */
+
+/* ---------- RESET & GLOBAL ---------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
+  }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: radial-gradient(
+    circle at top,
+    #0f172a,
+    #020617 60%
+  );
+  color: #e5e7eb;
+  padding-top: 72px;
+}
+
+
+/* ---------- ANIMATION UTILITIES ---------- */
+.fade-up {
+opacity: 0;
+transform: translateY(40px);
+animation: fadeUp 1s ease forwards;
+}
+
+.fade-delay-1 { animation-delay: .2s; }
+.fade-delay-2 { animation-delay: .4s; }
+.fade-delay-3 { animation-delay: .6s; }
+
+@keyframes fadeUp {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+/* ---------- NAVBAR (VICTORY STYLE) ---------- */
+nav {
+position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 16px 40px;
+background: rgba(15, 15, 15, 0.85);
+backdrop-filter: blur(16px);
+box-shadow: 0 10px 35px rgba(0,0,0,.6);
+}
+
+.logo { font-size: 1.4rem; font-weight: 700; }
+.logo span { color: #ff8a00; }
+
+.nav-links {
+list-style: none;
+display: flex;
+gap: 22px;
+}
+
+.nav-links a {
+color: #dcdcdc;
+text-decoration: none;
+font-weight: 500;
+position: relative;
+}
+
+.nav-links a::after {
+content: "";
+position: absolute;
+bottom: -6px;
+left: 0;
+width: 0;
+height: 2px;
+background: #ff8a00;
+transition: width .3s ease;
+}
+
+.nav-links a:hover::after { width: 100%; }
+
+/* ---------- HERO (WOW SECTION) ---------- */
+.hero {
+  min-height: calc(100vh - 80px); /* subtract navbar height */
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background:
+    radial-gradient(circle at center, rgba(255,138,0,.08), transparent 55%),
+    linear-gradient(135deg, #121212, #1c1c1c);
+}
+
+.profile-pic {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+margin-bottom: 22px;
+box-shadow: 0 0 50px rgba(255,138,0,.35);
+}
+
+.hero h1 {
+font-size: 3.2rem;
+color: #ff8a00;
+}
+
+.hero-subtitle {
+max-width: 650px;
+margin: 15px auto 35px;
+color: #cfcfcf;
+font-size: 1.15rem;
+}
+
+.hero-buttons {
+display: flex;
+justify-content: center;
+gap: 18px;
+}
+
+/* ---------- BUTTONS (VICTORY FEEL) ---------- */
+.btn {
+padding: 14px 32px;
+border-radius: 16px;
+font-weight: 700;
+background: linear-gradient(135deg, #ff8a00, #ffb347);
+color: #111;
+text-decoration: none;
+transition: all .35s ease;
+}
+
+.btn.secondary {
+background: transparent;
+border: 2px solid #ff8a00;
+color: #ff8a00;
+}
+
+.btn:hover {
+transform: translateY(-3px) scale(1.05);
+box-shadow: 0 15px 40px rgba(255,138,0,.45);
+}
+
+/* ---------- SECTION HEADERS ---------- */
+section {
+max-width: 1100px;
+margin: 110px auto;
+padding: 0 20px;
+}
+
+h2 {
+text-align: center;
+font-size: 2rem;
+color: #ff8a00;
+margin-bottom: 35px;
+}
+
+/* ---------- CARDS (FLOATING) ---------- */
+.project-grid,
+.design-grid,
+.edu-container,
+.extra-container,
+.cert-container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+gap: 30px;
+}
+
+.card,
+.design-card,
+.edu-card,
+.extra-card,
+.cert-card {
+background: linear-gradient(180deg, #1f1f1f, #151515);
+border-radius: 18px;
+padding: 24px;
+box-shadow: 0 12px 40px rgba(0,0,0,.65);
+transition: transform .45s ease, box-shadow .45s ease;
+}
+
+.card:hover,
+.design-card:hover {
+transform: translateY(-12px);
+box-shadow: 0 25px 55px rgba(255,138,0,.25);
+}
+
+.card h3,
+.design-card h3 { color: #ffb347; }
+
+.project-thumb,
+.design-card img {
+width: 100%;
+height: 180px;
+border-radius: 14px;
+object-fit: cover;
+margin-bottom: 14px;
+}
+
+/* ---------- CONTACT (HIGHLIGHT) ---------- */
+.contact {
+background:
+radial-gradient(circle at top, rgba(255,138,0,.15), transparent 60%),
+linear-gradient(135deg, #1a1a1a, #242424);
+padding: 55px 25px;
+border-radius: 22px;
+text-align: center;
+box-shadow: 0 15px 45px rgba(0,0,0,.7);
+}
+
+.contact a {
+color: #ff8a00;
+font-weight: 600;
+text-decoration: none;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+text-align: center;
+padding: 25px 10px;
+color: #9c9c9c;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+.hero h1 { font-size: 2.2rem; }
+.hero-buttons { flex-direction: column; }
+.btn { width: 90%; }
+nav { padding: 14px 20px; }
+}
+/* ---------- PROJECT CATEGORY CARDS ---------- */
+.category-card {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.category-card .explore {
+  margin-top: 15px;
+  display: inline-block;
+  color: #ff8a00;
+  font-weight: 600;
+}
+/* ---------- SMALL BUTTON (PROJECT DEMO) ---------- */
+.btn.small {
+  margin-top: 15px;
+  display: inline-block;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+}
+/* ---------- TEXT VISIBILITY FIX ---------- */
+section p {
+  color: #d1d5db; /* soft light gray – very readable */
+}
+
+.category-card p {
+  color: #cbd5e1; /* description inside cards */
+}
+/* ---------- APPLE STYLE LIST ---------- */
+.apple-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+  text-align: left;
+}
+/* ---------- APPLE STYLE CHECK ICON (NO SVG FILE) ---------- */
+.apple-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.apple-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--orange-main);
+  position: relative;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.apple-check::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 6px;
+  height: 10px;
+  border-right: 2px solid var(--orange-main);
+  border-bottom: 2px solid var(--orange-main);
+  transform: rotate(45deg);
+}
+
+.apple-list li {
+  margin-bottom: 8px;
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+/* ==================================================
+   VICTORY / CIPHERSCHOOLS TYPOGRAPHY & SPACING FIX
+   (PASTE AT VERY BOTTOM OF style.css)
+================================================== */
+
+/* FONT SETUP */
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.2px;
+}
+
+h1, h2, h3 {
+  font-family: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  letter-spacing: -0.3px;
+}
+
+/* MY WORK DESCRIPTION TEXT */
+.work-desc {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+/* CATEGORY CARD TEXT */
+.category-card h3 {
+  margin-bottom: 8px;
+}
+
+.category-card p {
+  margin-bottom: 18px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+/* EXPLORE TEXT WITH EMOJI */
+.category-card .explore {
+  font-weight: 600;
+  color: #ff8a00;
+  letter-spacing: 0.3px;
+}
+
+/* CARD SPACING (VERY IMPORTANT) */
+.category-card {
+  padding: 32px 28px;
+  border-radius: 20px;
+}
+
+.project-grid {
+  gap: 36px;
+}
+
+/* APPLE STYLE LIST (FOR PROJECT PAGE) */
+.apple-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.apple-list li {
+  margin-bottom: 8px;
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+/* ---------- CARD REFINEMENT ---------- */
+
+.category-card {
+  padding: 32px 28px;
+  border-radius: 20px;
+}
+
+.project-grid {
+  gap: 36px;
+}
+/* ---------- MY WORK TEXT & SPACING FIX ---------- */
+
+.work-desc {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+/* Card text spacing */
+.category-card h3 {
+  margin-bottom: 8px;
+}
+
+.category-card p {
+  margin-bottom: 18px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+/* Explore text */
+.category-card .explore {
+  font-weight: 600;
+  color: #ff8a00;
+  letter-spacing: 0.3px;
+}
+/* ---------- DARK MODE DEPTH IMPROVEMENT ---------- */
+
+.card,
+.category-card,
+.design-card,
+.edu-card,
+.extra-card,
+.cert-card {
+  background: #111827;
+}
+section {
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.01);
+  border-radius: 24px;
+  z-index: -1;
+}
+/* ==================================================
+   APPLE-STYLE PREMIUM POLISH (FINAL)
+   Paste at VERY BOTTOM of style.css
+================================================== */
+
+/* ---------- GLOBAL SPACING RHYTHM ---------- */
+section {
+  margin: 120px auto;
+}
+
+/* ---------- GRID SPACING ---------- */
+.project-grid,
+.design-grid,
+.edu-container,
+.extra-container,
+.cert-container {
+  gap: 44px; /* more breathing space */
+}
+
+/* ---------- CARD BASE (PREMIUM FEEL) ---------- */
+.card,
+.category-card,
+.design-card,
+.edu-card,
+.extra-card,
+.cert-card {
+  padding: 36px 34px;
+  border-radius: 22px;
+  background: #111827;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background 0.35s ease;
+}
+
+/* ---------- CARD HOVER (APPLE SOFT LIFT) ---------- */
+.card:hover,
+.category-card:hover,
+.design-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(255, 138, 0, 0.08);
+}
+
+/* ---------- CARD TYPOGRAPHY ---------- */
+.card h3,
+.category-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  line-height: 1.25;
+}
+
+.card p,
+.category-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+}
+
+/* ---------- HERO BUTTON SPACING ---------- */
+.hero-buttons {
+  gap: 22px;
+  margin-top: 42px;
+}
+
+/* ---------- BUTTON REFINEMENT ---------- */
+.btn {
+  padding: 14px 30px;
+  border-radius: 18px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* ---------- EXPLORE TEXT ---------- */
+.category-card .explore {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* ---------- LIST (APPLE STYLE) ---------- */
+.apple-list li {
+  padding-left: 2px;
+  line-height: 1.7;
+}
+
+/* ---------- MOBILE ADJUSTMENT ---------- */
+@media (max-width: 768px) {
+  section {
+    margin: 90px auto;
+  }
+
+  .card,
+  .category-card {
+    padding: 28px 24px;
+  }
+
+  .project-grid {
+    gap: 28px;
+  }
+}
+/* ==================================================
+   GET IN TOUCH – APPLE PREMIUM STYLE
+================================================== */
+
+.contact {
+  text-align: center;
+  padding: 70px 30px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top, rgba(255,138,0,0.12), transparent 60%),
+    #020617;
+}
+
+.contact-desc {
+  max-width: 680px;
+  margin: 0 auto 50px;
+  color: #cbd5e1;
+  font-size: 1.05rem;
+}
+
+/* Contact cards layout */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Individual contact card */
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 26px 24px;
+  border-radius: 22px;
+  background: #111827;
+  text-decoration: none;
+  color: inherit;
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.45),
+    inset 0 1px 0 rgba(255,255,255,0.02);
+  transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(255,138,0,0.12);
+}
+
+/* Emoji icon */
+.contact-card > span,
+.contact-card:first-child {
+  font-size: 1.8rem;
+}
+
+/* Text inside card */
+.contact-card h4 {
+  font-family: "DM Sans", sans-serif;
+  margin-bottom: 4px;
+  font-size: 1.05rem;
+}
+
+.contact-card span {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* Mobile tweak */
+@media (max-width: 768px) {
+  .contact {
+    padding: 55px 20px;
+  }
+}
+/* ==================================================
+   GET IN TOUCH – LAYOUT FIX (APPLE STYLE)
+================================================== */
+
+.contact {
+  padding: 80px 20px;
+}
+
+/* Constrain width like Apple */
+.contact-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Title spacing */
+.contact h2 {
+  margin-bottom: 18px;
+}
+
+/* Description spacing */
+.contact-desc {
+  max-width: 620px;
+  margin: 0 auto 42px;
+  line-height: 1.7;
+}
+
+/* Cards grid – perfectly centered */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  justify-items: stretch;
+}
+
+/* Card sizing consistency */
+.contact-card {
+  min-height: 120px;
+  justify-content: center;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    padding: 60px 16px;
+  }
+}
+h2 {
+  color: var(--orange-soft);
+}
+.btn {
+  background: var(--orange-main);
+}
+.explore,
+a {
+  color: var(--orange-soft);
+}
+/* ==================================================
+   PROJECTS PAGE – CARD SPACING FIX (PREMIUM)
+================================================== */
+
+/* More space between sections in projects.html */
+body.projects-page section,
+section[id="web"],
+section[id="uiux"],
+section[id="client"] {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+/* Increase grid gap ONLY for projects page */
+body.projects-page .project-grid {
+  gap: 48px;
+}
+
+/* Card padding refinement */
+body.projects-page .card {
+  padding: 38px 34px;
+}
+
+/* Prevent cards from sticking together visually */
+body.projects-page .card + .card {
+  margin-top: 0;
+}
+
+/* Mobile spacing fix */
+@media (max-width: 768px) {
+  body.projects-page section {
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+
+  body.projects-page .project-grid {
+    gap: 30px;
+  }
+
+  body.projects-page .card {
+    padding: 30px 24px;
+  }
+}
+/* ---------- NAVBAR ACTIVE LINK ---------- */
+.nav-links a {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+.nav-links a.active {
+  color: var(--orange-main);
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--orange-main);
+  border-radius: 2px;
+}
+/* ---------- RESPONSIVE NAVBAR ---------- */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--orange-main);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #020617;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 16px;
+    gap: 16px;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+}
+/* ==================================================
+   MOBILE NAVBAR – FINAL HARD FIX
+================================================== */
+
+@media (max-width: 768px) {
+
+  nav {
+    position: fixed;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block !important;
+    font-size: 1.8rem;
+    cursor: pointer;
+    z-index: 3000;
+  }
+
+  .nav-links {
+    position: fixed !important;
+    top: 72px;
+    right: 16px;
+    width: 220px;
+    background: #020617;
+    flex-direction: column !important;
+    padding: 22px;
+    border-radius: 18px;
+    gap: 18px;
+    display: none !important;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.65);
+    z-index: 2500;
+  }
+
+  .nav-links.show {
+    display: flex !important;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+  }
+}
+/* ==================================================
+   HERO BUTTON CENTER FIX (MOBILE)
+================================================== */
+
+@media (max-width: 768px) {
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+}
+/* ==================================================
+   FEATURED PROJECT – PREMIUM SHOWCASE
+================================================== */
+
+.featured-project {
+  margin: 140px auto;
+}
+
+.featured-wrapper {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.featured-badge {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background: rgba(255, 138, 0, 0.12);
+  color: var(--orange-main);
+}
+
+.featured-desc {
+  margin: 18px 0 26px;
+  max-width: 520px;
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.featured-actions {
+  margin-top: 30px;
+}
+
+.featured-image img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.6),
+    0 0 0 1px rgba(255,138,0,0.08);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .featured-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .featured-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .featured-actions {
+    display: flex;
+    justify-content: center;
+  }
+}
+/* ==================================================
+   TYPOGRAPHY POLISH – APPLE STYLE
+================================================== */
+
+h1 {
+  line-height: 1.15;
+}
+
+h2 {
+  line-height: 1.25;
+  margin-bottom: 32px;
+}
+
+p {
+  line-height: 1.7;
+  letter-spacing: 0.2px;
+}
+
+/* Limit paragraph width for readability */
+.about-text,
+.work-desc,
+.featured-desc,
+.contact-desc {
+  max-width: 680px;
+}
+section {
+  margin: 140px auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 90px auto;
+  }
+}
+.featured-impact {
+  margin-top: 10px;
+  color: #9ca3af;
+  font-size: 0.95rem;
+}
+navLinksAll.forEach(link => {
+  link.addEventListener("click", () => {
+    document.querySelector(".nav-links")?.classList.remove("show");
+  });
+});
+/* ===== APPLE-STYLE CHECK (CROSS-PLATFORM PERFECT) ===== */
+
+.apple-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.apple-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1.6px solid rgba(255, 138, 0, 0.9);
+  position: relative;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.apple-check::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 3px;
+  width: 6px;
+  height: 10px;
+  border-right: 2px solid rgba(255, 138, 0, 0.95);
+  border-bottom: 2px solid rgba(255, 138, 0, 0.95);
+  transform: rotate(45deg);
+}
+.apple-list li:hover .apple-check {
+  box-shadow: 0 0 0 4px rgba(255,138,0,0.12);
+}
+/* ==================================================
+   SOFT GLOW BEHIND CARDS (PREMIUM DEPTH)
+================================================== */
+
+.card,
+.category-card,
+.cert-card,
+.contact-card,
+.featured-project {
+  position: relative;
+  z-index: 1;
+}
+
+.card::before,
+.category-card::before,
+.cert-card::before,
+.contact-card::before,
+.featured-project::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    circle at top,
+    rgba(255, 138, 0, 0.12),
+    transparent 70%
+  );
+  z-index: -1;
+  filter: blur(35px);
+  opacity: 0.85;
+}
+/* ==================================================
+   SOFT TINT BACKDROP (APPLE-STYLE AMBIENT PANEL)
+================================================== */
+
+.tinted-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.tinted-section::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(255, 138, 0, 0.18),
+      transparent 65%
+    );
+  z-index: 0;
+}
+
+.tinted-section > * {
+  position: relative;
+  z-index: 1;
+}
+/* ==================================================
+   CONTROLLED AMBIENT TINT (MATCHES GET IN TOUCH)
+================================================== */
+
+.tinted-section {
+  position: relative;
+  overflow: hidden;
+  padding: 120px 20px; /* creates breathing space */
+  border-radius: 28px;
+}
+
+.tinted-section::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  width: 140%;
+  height: 120%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 138, 0, 0.16),
+    transparent 60%
+  );
+  z-index: 0;
+}
+
+.tinted-section > * {
+  position: relative;
+  z-index: 1;
+}
+/* ==================================================
+   SECTION TITLE SPACING (PREMIUM RHYTHM)
+================================================== */
+
+/* ==================================================
+   TINTED SECTION – SAME RHYTHM AS GET IN TOUCH
+================================================== */
+
+.tinted-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 20px; /* 🔥 reduced from 120px */
+  border-radius: 28px;
+}
+.tinted-section h2 {
+  margin-bottom: 32px;
+}
+
+/* ==================================================
+   CARD AMBIENT PANEL SHADOW (UNIFIED LOOK)
+================================================== */
+
+.card,
+.category-card,
+.cert-card,
+.contact-card,
+.edu-card,
+.extra-card {
+  position: relative;
+  background: #111827;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+/* ==================================================
+   TECH STACK PILLS – APPLE STYLE
+================================================== */
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 18px 0 6px;
+}
+
+.tech-stack span {
+  font-size: 0.75rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+
+  background: rgba(255, 138, 0, 0.08);
+  color: var(--orange-main);
+  border: 1px solid rgba(255, 138, 0, 0.25);
+}
+
+/* Mobile spacing fix */
+@media (max-width: 768px) {
+  .tech-stack {
+    justify-content: center;
+  }
+}
+/* =========================================
+   HERO SPACING FIX (OVERRIDE)
+========================================= */
+
+.hero {
+  margin-top: 0 !important;
+}
+/* =========================================
+   GLOBAL SECTION SPACING FIX
+========================================= */
+
+section {
+  margin: 110px auto;
+}
+
+@media (max-width: 768px) {
+  section {
+    margin: 80px auto;
+  }
+}
+.hero {
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin-bottom: 60px;
+  }
+}
+/* =========================================
+   ABOUT SECTION TEXT ALIGNMENT FIX
+========================================= */
+
+#about .about-text {
+  max-width: 680px;
+  margin: 0 auto;        /* centers the block */
+  text-align: left;      /* keeps readability */
+}
+@media (max-width: 768px) {
+  #about .about-text {
+    font-size: 0.95rem;
+  }
+}
+/* =========================================
+   CARD DEPTH – GLOBAL CONSISTENCY
+========================================= */
+
+.card,
+.category-card,
+.design-card,
+.edu-card,
+.extra-card,
+.cert-card {
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+/* =========================================
+   PROJECTS PAGE – RHYTHM FIX
+========================================= */
+
+body.projects-page section {
+  max-width: 900px;
+}
+
+body.projects-page .card {
+  margin-top: 36px;
+}
+
+@media (max-width: 768px) {
+  body.projects-page .card {
+    margin-top: 26px;
+  }
+}
+/* =========================================
+   MICRO TYPOGRAPHY POLISH
+========================================= */
+
+h2 {
+  letter-spacing: -0.4px;
+}
+
+.card p,
+.cert-card p,
+.featured-desc,
+.about-text,
+.work-desc {
+  line-height: 1.75;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+/* =========================================
+   MICRO TYPOGRAPHY POLISH
+========================================= */
+
+h2 {
+  letter-spacing: -0.4px;
+}
+
+.card p,
+.cert-card p,
+.featured-desc,
+.about-text,
+.work-desc {
+  line-height: 1.75;
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+/* =========================================
+   TECH STACK MICRO POLISH
+========================================= */
+
+.tech-stack {
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
+.tech-stack span {
+  backdrop-filter: blur(6px);
+}
+/* =========================================
+   BUTTON SPACING CONSISTENCY
+========================================= */
+
+.card .btn {
+  margin-top: 20px;
+}
+/* =========================================
+   PROJECTS PAGE – SHOW BACK BUTTON ON MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+  body.projects-page .nav-links {
+    display: flex !important;
+    position: static !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  body.projects-page nav {
+    justify-content: space-between;
+    padding: 14px 20px;
+  }
+
+  body.projects-page .nav-links a {
+    font-size: 0.95rem;
+  }
+}
+/* =========================================
+   PROJECTS PAGE – RIGHT ALIGNED BACK BUTTON
+========================================= */
+
+@media (max-width: 768px) {
+  body.projects-page nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+  }
+
+  body.projects-page .nav-links {
+    display: flex !important;
+    position: static !important;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  body.projects-page .nav-links li {
+    list-style: none;
+  }
+
+  body.projects-page .nav-links a {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+}
+/* =========================================
+   PROJECTS PAGE – MOBILE NAVBAR (HARD FIX)
+========================================= */
+
+body.projects-page .projects-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  padding: 0 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(14px);
+  z-index: 5000;
+}
+
+/* Logo */
+body.projects-page .projects-nav .logo {
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* Back button */
+body.projects-page .projects-nav .back-home {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Push page content below navbar */
+body.projects-page {
+  padding-top: 80px;
+}
+
+/* Mobile only */
+@media (max-width: 768px) {
+  body.projects-page .projects-nav {
+    height: 60px;
+  }
+}
+/* =========================================
+   MOBILE HAMBURGER ICON – WHITE
+========================================= */
+
+.menu-toggle {
+  color: #ffffff !important;
+}
+/* =========================================
+   BACK TO HOME – ANIMATED UNDERLINE (WHITE)
+========================================= */
+
+.back-home {
+  position: relative;
+  color: #ffffff !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+/* animated underline */
+.back-home::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+/* hover / tap */
+.back-home:hover::after,
+.back-home:focus::after {
+  width: 100%;
+}
