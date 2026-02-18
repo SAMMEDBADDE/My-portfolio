@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  /* ---------- CLOSE MENU ON LINK CLICK (MOBILE) ---------- */
+  /* ---------- CLOSE MENU ON LINK CLICK (MOBILE) ------- */
   navLinksAll.forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("show");
@@ -48,3 +48,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
